@@ -2,26 +2,108 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+}
+
+.blog-content * {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.blog-content h1 {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  letter-spacing: -0.024em;
+}
+
+.blog-content h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+}
+
+.blog-content h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+}
+
+.blog-content h4 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+}
+
+.blog-content p {
+  line-height: 1.5rem;
+  margin-bottom: 1.75rem;
+  letter-spacing: 0.2px;
+  line-height: 1.8rem;
+  font-size: 1.1rem;
+}
+
+.blog-content figure img {
+  width: 100%;
+  margin: 1rem auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.blog-content figure:first-of-type {
+  display: none;
+}
+
+.blog-content ul {
+  margin-bottom: 1.75rem;
+  margin-left: 1.75rem;
+  list-style: disc;
+}
+
+.blog-content ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.75rem;
+  letter-spacing: 0.2px;
+  line-height: 1.8rem;
+  font-size: 1.1rem;
+}
+
+.blog-content ol {
+  margin-bottom: 1.75rem;
+  margin-left: 1.75rem;
+  list-style: decimal;
+}
+
+.blog-content ol li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.75rem;
+  letter-spacing: 0.2px;
+  line-height: 1.8rem;
+  font-size: 1.1rem;
+}
+
+.blog-content blockquote {
+  margin: 1.75rem 0;
+  padding: 0.5rem 1rem;
+  border-left: 0.25rem solid #000;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.2px;
 }
